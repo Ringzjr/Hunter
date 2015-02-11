@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-type" content="text/html" charset="UTF-8" />
+<head>
+
+<link rel="stylesheet" type="text/css" href="look.css" />
+
+<style>
+
+body {
+background-color: #d0e4fe;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div align="center" id="big">
+		<!-- This is where the navigation buttons are -->
+<button id = "login" class = "navigation" type = "button" onclick = "logIn()"> Anonymous </button>
+<button id = "home" class = "navigation" type = "button" onclick = "restart()">Home</button>
+
+
+
+
+<div align="center" id="frame">
+  
+<button id = "create" type = "button" onclick = "createTitle()"> Menu </button>
+<p id = "demo"></p>
+
+
+<audio id="tick">
+	<source src="Sounds/mouseOn.wav"></source>
+	owned
+</audio>
+
+<audio id="clicked">
+	<source src="Sounds/clicked.wav"></source>
+</audio>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+	window.onload=startPage();
+	window.onload=tick();
+
+	function startPage() {
+		
+		
+		var div = document.getElementById("frame");
+		var dia = document.createElement("BUTTON");
+		var deb = document.createElement("BUTTON");
+		var dia_name = document.createTextNode("Multiplayer");
+		var deb_name = document.createTextNode("Against AI");
+		dia.className = "Start";
+		deb.className = "Start";
+
+		dia.style.height = "200px";
+		dia.style.width = "200px";
+		dia.style.fontSize = "30px";
+		deb.style.width = "200px";
+		deb.style.height = "200px";
+		deb.style.fontSize = "30px";
+
+		var br = document.createElement("br");
+		document.body.appendChild(dia);
+		document.body.appendChild(deb);
+		dia.appendChild(dia_name);
+		deb.appendChild(deb_name);
+		$(".Start").appendTo(div);
+		$(".Start").animate({height:"220px"});
+		$(".Start").animate({width:"220px"});
+		$(".Start").animate({height:"200px"});
+		$(".Start").animate({width:"200px"});
+		$(".Start").wrap("<li></li>");
+		div.style.height = "70vh";
+
+	}
+
+	function restart() {
+		$(".Start").remove();
+		startPage();
+	}
+
+
+	function genList() {
+
+		var nav = document.getElementById("navigation");
+
+		for (i = 1; i < 11; i++) {
+				//create button
+			var btn=document.createElement("BUTTON");
+			var t=document.createTextNode("DIALOGUE "+i);
+				//text to button then the button to document
+			btn.appendChild(t);
+			document.body.appendChild(btn);
+
+			var br=document.createElement("br");
+			document.body.appendChild(br);
+			document.body.style.textAlign = "center";
+
+		}
+		
+		$("BUTTON").appendTo(div);
+		$("BUTTON").wrap("<li></li>");
+		div.style.height = "70vh";
+		//$('#frame').appendTo('#big');
+	}
+
+
+	// This function is called by login button.
+	function logIn() 
+	{
+		var name = prompt("Create a name", "Anonymous");
+		if(!name)
+			{name = "Anonymous";}
+		var log = document.getElementById("login");
+		log.innerHTML = name;
+
+	}
+
+
+	function changeMode() 
+	{
+	var title = prompt("Enter title:");
+	var test = document.getElementById("create");
+        test.innerHTML = "hunter";
+	//test.parentElement.removeChild(test);
+	//window.open("dialogue.html");
+	}
+
+
+	// Audio Functions
+	function tick(){
+	var audio = document.getElementById("tick");
+	var audio2 = document.getElementById("clicked");
+	$("button").mouseenter(function() {
+		audio.play();
+	})
+	$("button").click(function() {
+		audio2.play();
+		})
+	
+	}
+
+</script>
+
+
+</div>
+
+
+</body>
+</html> 

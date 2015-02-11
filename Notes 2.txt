@@ -1,0 +1,15 @@
+Javascript syntax
+
+Function:
+   function blah(x,y) { code; }
+   
+   
+Variables:
+  var blah = {firstname: "joe", lastname: "bob"};
+  
+  
+Goals:
+	When against AI or Multiplayer is clicked, all buttons and one text node are removed
+		- then a new group of buttons are added
+		
+	

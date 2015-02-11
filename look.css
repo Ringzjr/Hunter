@@ -1,0 +1,67 @@
+#frame {
+top: 20px;
+height: 70vh;
+width: 90vh;
+margin: 0 auto;
+background-color: yellow; border: 1px solid black;
+position: relative;
+border-radius: 55px;
+}
+
+#big {
+height: 80vh;
+width: 100vh;
+margin: 5vh auto;
+background-color: red; border: 3px solid black;
+border-radius: 55px;
+position: relative;
+}
+
+button {
+ border-radius: 55px;
+ background-color: white;
+ outline: none;
+}
+
+#create:hover{
+	width: 110px;
+	}
+
+li {
+list-style-type: none;
+margin-bottom: 20px;
+}
+
+.navigation {
+position: absolute;
+bottom: 0;
+background-color: orange;
+}
+
+
+#login {
+left: 40px;
+}
+
+#login:hover{
+height: 30px;
+width: 90px;
+}
+
+#home {
+left: 359px;
+}
+
+#home:hover {
+height: 30px;
+width: 60px;
+}
+
+
+
+.Start button:hover {
+height: 250px;
+width: 250px;
+
+}
+

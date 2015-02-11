@@ -1,0 +1,43 @@
+Code 
+
+//This code makes a list of buttons 
+
+function genList() {
+var div = document.getElementById("frame");
+var nav = document.getElementById("navigation");
+
+for (i = 1; i < 11; i++) {
+	//create button
+var btn=document.createElement("BUTTON");
+var t=document.createTextNode(“choice "+i);
+	//text to button then the button to document
+btn.appendChild(t);
+document.body.appendChild(btn);
+
+var br=document.createElement("br");
+document.body.appendChild(br);
+document.body.style.textAlign = "center";
+
+}
+$("BUTTON").appendTo(div);
+$("BUTTON").wrap("<li></li>");
+div.style.height = "70vh";
+//$('#frame').appendTo('#big');
+
+
+//div.appendTo(nav);
+//div.style.width = "98vh";
+
+//$("br").appendTo(document.getElementById("frame"));
+}
+
+
+
+session handling
+ajax
+web sockets
+	create a client that is constantly pinging the server 
+	client to client communication in javascript 
+standardized server to client
+
+
